@@ -26,11 +26,13 @@ const rad=180/3.142
 var ar=[3,0, 4,30, 5,90, 4,150, 4,210, 6,220, 6,320, 330,4]
 
 drawShp(){
+  ang=ar[1]+a
  ct1.beginPath()
- ct1.moveTo(shp.x + s*ar[0]*Math.cos(ar[1]*rad), shp.y+ s*ar[0]*Math.sin(ar[1]*rad) )
+ ct1.moveTo(shp.x + s*ar[0]*Math.cos(ang*rad), shp.y+ s*ar[0]*Math.sin(ang*rad) )
   
  for (p=2; p<ar.length; p+=2){
-  ct1.lineTo(shp.x+ s*ar[p]*Math.cos(ar[p+1]*rad), shp.y + s*ar[p]*Math.sin(ar[p+1]*rad))
+  ang=ar[1]+a
+  ct1.lineTo(shp.x+ s*ar[p]*Math.cos(ang*rad), shp.y + s*ar[p]*Math.sin(ang*rad))
  }
  ct1.closePath()
   ct1.stroke()
