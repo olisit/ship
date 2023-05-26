@@ -28,11 +28,11 @@ var ar=[4,0, 4, 10, 4,20, 4,30, 5,90, 4,150, 4,160, 4,170, 4,180, 4,210, 6,220, 
 function drawShp(){
  ct1.beginPath()
   ang=ar[1]+a
- ct1.moveTo(shp.x + s*ar[0]*Math.cos(ang*rad), shp.y+ s*ar[0]*Math.sin(ang*rad) )
+ ct1.moveTo(shp.x + s*ar[0]*Math.cos(ang/rad), shp.y+ s*ar[0]*Math.sin(ang/rad) )
   
  for (p=2; p<ar.length; p+=2){
   ang=ar[p+1]+a
-  ct1.lineTo(shp.x+ s*ar[p]*Math.cos(ang*rad), shp.y + s*ar[p]*Math.sin(ang*rad))
+  ct1.lineTo(shp.x+ s*ar[p]*Math.cos(ang/rad), shp.y + s*ar[p]*Math.sin(ang/rad))
  }
  ct1.closePath()
  ct1.stroke()
