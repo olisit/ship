@@ -27,7 +27,7 @@ var ar=[3,0, 4,30, 5,90, 4,150, 4,210, 6,220, 6,320, 330,4]
  ct1.moveTo(s*ar[0]*Math.cos(ar[1]*rad), s*ar[0]*Math.sin(ar[1]*rad) )
   
  for (p=2; p<ar.length; p+=2){
-  ct1.lineTp(s*ar[p]*Math.cos(ar[p+1]*rad), s*ar[p]*Math.sin(ar[p+1]*rad))
+  ct1.lineTo(s*ar[p]*Math.cos(ar[p+1]*rad), s*ar[p]*Math.sin(ar[p+1]*rad))
  }
  ct1.closePath()
   ct1.stroke()
