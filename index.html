@@ -41,15 +41,19 @@ function drawShp(){
  drawShp() 
   
   c2.addEventListener("click", function(event) {
-    a++
-    ct2.fillStyle = "brown";
+    proc =setInterval( rot,50)
+    /* ct2.fillStyle = "brown";
    ct2.fillRect(0,0,200,200)
    ct2.fillStyle="yellow" 
-    ct2.fillRect(0,90,a,20)
+    ct2.fillRect(0,90,a,20) */
     
-    ct1.clearRect(0,0,200,200)
-    drawShp()
   } )
+  
+  function rot(){
+    ct1.clearRect(0,0,200,200)
+    a+=.02
+    drawShp()
+  }
   
   /*
   function add(){
